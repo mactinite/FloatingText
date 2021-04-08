@@ -5,7 +5,8 @@
   "description": "A simple implementation of floating text with built in pooling.",
   "unity": "2020.3",
   "dependencies": {
-    "com.unity.textmeshpro": "3.0.0"
+    "com.unity.textmeshpro": "3.0.0",
+    "com.mactinite.toolboxcommons": "0.0.1"
   },
   "author": {
     "name": "Hunter MacDonald",
