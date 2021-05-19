@@ -32,7 +32,7 @@ namespace mactinite.FloatingText
             canvas = GetComponentInParent<Canvas>();
             transform.localScale = Vector3.one;
             xOffset = Random.Range(-10f, 10f);
-            uiText = GetComponent<TMPro.TextMeshProUGUI>();
+            uiText = GetComponent<TMP_Text>();
             origin = riseFrom;
             alpha = 1;
             currentHeight = transform.position.y;
@@ -42,6 +42,7 @@ namespace mactinite.FloatingText
             color.a = alpha;
             uiText.color = color;
             StartOnTransform(riseFrom);
+            started = true;
         }
 
         private void Update()
@@ -64,7 +65,9 @@ namespace mactinite.FloatingText
 
         public void UpdatePosition()
         {
-            currentHeight += riseSpeed * Time.deltaTime;
+            Vector2 newPosition = transform.position;
+            newPosition.y += riseSpeed * Time.deltaTime;
+            
         }
 
         public void UpdateAlpha()
