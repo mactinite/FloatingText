@@ -103,17 +103,14 @@ namespace mactinite.FloatingText
                 var canvasRect = transform.parent as RectTransform;
                 var inRect = RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screenPoint, canvas.worldCamera, out var position);
                 transform.localPosition = position;
+                uiText.enabled = true;
             }
             else
             {
-                var screenPoint = Vector3.Lerp(screenPosition, screenTargetPosition, Time.deltaTime * 500f);
-                var inRect = RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, screenPoint, null, out var position);
-                var canvasRect = transform.parent as RectTransform;
-                position = Vector2.ClampMagnitude(position, canvasRect.sizeDelta.y * .45f);
-                transform.localPosition = position;
+                uiText.enabled = false;
             }
 
-            uiText.enabled = true;
+           
 
         }
     }
