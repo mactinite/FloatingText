@@ -14,7 +14,9 @@ namespace mactinite.FloatingText
 
         private List<Transform> floatingTextPool = new List<Transform>();
         private List<Transform> sleepingText = new List<Transform>();
-        private void Awake()
+
+
+        private void Start()
         {
             for (int i = 0; i < preload; i++)
             {
