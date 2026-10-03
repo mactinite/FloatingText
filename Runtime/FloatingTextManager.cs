@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using mactinite.ToolboxCommons;
+using toolbox.Singleton;
 
 namespace mactinite.FloatingText
 {
-    public class FloatingTextManager : SingletonMonobehavior<FloatingTextManager>
+    public class FloatingTextManager : SingletonBehaviour<FloatingTextManager>
     {
 
         public Transform textPrefab;
